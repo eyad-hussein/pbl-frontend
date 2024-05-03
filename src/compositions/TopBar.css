@@ -1,0 +1,210 @@
+/* TopBar.css */
+@font-face {
+    font-family: 'Londrina Shadow';
+    src: url(../fonts/LondrinaShadow-Regular.ttf);
+}
+
+@font-face{
+    font-family: 'Marvel';
+    src: url(../fonts/Marvel-Regular.ttf);
+}
+
+button{
+    background: none;
+    border: none;
+    margin-right: 20px; 
+}
+
+.topbar {
+    position: fixed;
+    display: flex;
+  }
+  
+  .topbar > div {
+    display: flex;
+    align-items: center;
+  }
+
+  .topLeftLogo {
+    width: 52px;
+    height: 52px;
+    top: 6px;
+    left: 14px;
+    gap: 0px;
+    opacity: 0px; 
+  }
+
+  .userIcon{
+    width: 30px;
+    height: 30px;
+    top: 20px;
+    left: 1169px;
+    padding: 3.75px 4.13px 3.75px 4.13px;
+    gap: 0px;
+    opacity: 0px;
+  }
+
+  .pix2fix{
+    top: 10px;
+    left: 66px;
+    height: 48px;
+    width: 135px;
+    font-family: 'Londrina Shadow';
+    font-size: 37px;
+    font-weight: 400;
+    line-height: 43.77px;
+    text-align: left;
+    color: #FFFFFF;
+    transition: all 0.1s ease;
+  }
+
+  .pix2fix:hover{
+    cursor: pointer;
+  }
+
+  .home{
+    width: 61px;
+    height: 36px;
+    top: 17px;
+    left: 489px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: 'Marvel';
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 36.3px;
+    text-align: center;
+    color:#FFFFFF;
+    transition: all 0.1s ease;
+  }
+
+  .home:hover{
+    cursor: pointer;
+    color: #7D60FB
+  }
+
+  .product{
+    width: 82px;
+    height: 36px;
+    top: 17px;
+    left: 602px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: 'Marvel';
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 36.3px;
+    text-align: center;
+    color:#FFFFFF;
+    transition: all 0.1s ease;
+  }
+
+  .product:hover{
+    cursor: pointer;
+    color: #7D60FB
+  }
+
+  .tutorial{
+    width: 79px;
+    height: 36px;
+    top: 17px;
+    left: 736px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: 'Marvel';
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 36.3px;
+    text-align: center;
+    color:#FFFFFF;
+    transition: all 0.1s ease;
+  }
+
+  .tutorial:hover{
+    cursor: pointer;
+    color: #7D60FB
+  }
+
+  .support{
+    width: 83px;
+    height: 36px;
+    top: 17px;
+    left: 867px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: 'Marvel';
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 36.3px;
+    text-align: center;
+    color:#FFFFFF;
+    transition: all 0.1s ease;
+  }
+
+  .support:hover{
+    cursor: pointer;
+    color: #7D60FB
+  }
+
+  .signup{
+    width: 73px;
+    font-family: 'Marvel';
+    font-size: large;
+    height: 36px;
+    gap: 0px;
+    opacity: 0px;
+    background: #7D60FB;
+    border: 1px solid #FFFFFF;
+    border-radius: 18px;
+    color: white;
+  }
+
+  .signup:hover{
+    cursor: pointer;
+    border-width: 2px;
+    border-color: #FFFFFF;
+  }
+
+  .login{
+    width: 73px;
+    height: 36px;
+    font-family: 'Marvel';
+    font-size: large;
+    gap: 0px;
+    opacity: 0px;
+    background: #7D60FB;
+    border-radius: 18px;
+    border: 1px solid #FFFFFF;
+    border-radius: 18px;
+
+    color: #FFFFFF;
+  }
+
+  .login:hover{
+    cursor: pointer;
+    border-width: 2px;
+    border-color: #FFFFFF;
+  }
+
+  .leftbuttons{
+    position: relative;
+    display: flex;
+    top: 10px;
+  }
+  .middlebuttons{
+    position: relative;
+    display: flex;
+    left: 23vw;
+    top: 10px;
+  }
+
+  .rightbuttons{
+    position: relative;
+    display: flex;
+    top: 10px;
+    left: 40vw;
+  }
+
+  .userIcon:hover{
+    cursor: pointer;
+  }

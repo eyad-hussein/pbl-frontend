@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import React from 'react';
+import TopBar from './compositions/TopBar.js';
+import MiddleBar from './compositions/MiddleBar.js';
+import BottomBoxes from './compositions/BottomBoxes.js';
+import './components/global.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <TopBar />
+      <MiddleBar />
+      <BottomBoxes />
     </div>
   );
 }
