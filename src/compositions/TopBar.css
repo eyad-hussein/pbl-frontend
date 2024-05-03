@@ -18,11 +18,23 @@ button{
 .topbar {
     position: fixed;
     display: flex;
+    background-color: #1F2023;
+    width: 100%;
+    height: 80px;
+    z-index: 9999;
   }
   
   .topbar > div {
     display: flex;
     align-items: center;
+  }
+
+  .topbar a{
+    text-decoration: none;
+  }
+
+  .two-digit{
+    color:#7D60FB
   }
 
   .topLeftLogo {

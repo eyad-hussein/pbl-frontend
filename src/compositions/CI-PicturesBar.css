@@ -1,0 +1,97 @@
+@font-face {
+    font-family: 'Londrina Solid';
+    src: url('../fonts/LondrinaSolid-Regular.ttf');
+}
+
+.ci-picturesbar{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    top:100px;
+    gap: 20px;
+    padding: 10px;
+}
+
+.regenerateImage1_180{
+    border-radius: 90px;
+    border: 2px solid white;
+}
+.regenerateImage2_180{
+    border-radius: 90px;
+    border: 2px solid white;
+}
+
+.regenerateImage-text{
+    position: relative;
+    font-family: 'Londrina Solid';
+    top: 100px;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 105.29px;
+    text-align: center;
+    color: white;
+}
+
+.uploadimagehere{
+    display: flex;
+    position: relative;
+    width: 540px;
+    height: 80px;
+    top: 130px;
+    left: 31%;
+    gap: 0px;
+    opacity: 0px;
+    background: #5858E6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 40px;
+    transition: all 0.1s ease;
+  }
+.uploadimagehere:hover{
+  cursor: pointer;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #FFFFFF; 
+}
+.upload{
+    position: relative;
+    left:40px;
+}
+  .uploadimagehere-text{
+    position: relative;
+    width: 520px;
+    height: 75px;
+    top: 12px;
+    right: 15px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: 'Londrina Solid';
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 49.15px;
+    text-align: center;
+  }
+
+  .enhancingImage1_180{
+    border-radius: 90px;
+    border: 2px solid white;
+  }
+
+  
+  .enhancingImage2_180{
+    border-radius: 90px;
+    border: 2px solid white;
+  }
+
+  .sketchToImage1_180{
+    border-radius: 80px;
+    border: 2px solid white;
+  }
+
+  .sketchToImage2_180{
+    border-radius: 80px;
+    border: 2px solid white;
+  }
