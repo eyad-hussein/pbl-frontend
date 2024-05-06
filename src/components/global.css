@@ -1,7 +1,6 @@
-/* global.css */
-body {
-    width: 1440px;
-    height: 1024px;
-    background: #1F2023;
-    margin: 0 auto; 
-  }
+global.css body {
+  width: 1440px;
+  height: 1024px;
+  background: #1f2023;
+  margin: 0 auto;
+}
