@@ -16,14 +16,14 @@ const generatePicture = async (file, task) => {
   formData.append("image", file);
 
   console.log(`formdata ${formData}`);
-  await api
-    .post(`${task}`, formData)
-    .then(function (response) {
-      console.log(JSON.stringify(response.data));
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
+  try {
+    const reponse = await api.post(`${task}`, formData);
+    const data = reponse.data;
+
+    return data["processed_image"];
+  } catch (e) {
+    console.log(e);
+  }
 };
 
 export default {

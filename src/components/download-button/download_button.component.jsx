@@ -3,7 +3,7 @@ import pointer from "../../assets/icons/pointer.png";
 
 const DownloadButton = ({ path }) => {
   return (
-    <DownloadButtonContainer href={"img.png"} download>
+    <DownloadButtonContainer href={"data:image/png;base64," + path} download>
       <img src={pointer} alt='pointer' />
       <p className='download-details'>Download from Here</p>
     </DownloadButtonContainer>
