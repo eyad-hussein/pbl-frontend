@@ -5,7 +5,7 @@ const DownloadImage = ({ path }) => (
   <DownloadImageContainer>
     <h1>Image is done</h1>
 
-    <DownloadButton />
+    <DownloadButton path={path} />
   </DownloadImageContainer>
 );
 export default DownloadImage;

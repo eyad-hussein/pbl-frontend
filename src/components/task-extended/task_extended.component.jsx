@@ -7,6 +7,7 @@ import UploadButtonContainer from "../upload-button/upload_button.styles";
 import React, { useState, useEffect } from "react";
 import taskController from "../../controllers/task.controller";
 import { useNavigate } from "react-router-dom";
+import { Buffer } from "buffer";
 
 const TaskExtended = ({ task }) => {
   const { images, title, to } = task;
@@ -14,28 +15,27 @@ const TaskExtended = ({ task }) => {
 
   const navigate = useNavigate();
 
+  // const [isRecieved, setIsRecieved] = useState(false);
   const [downloadPath, setDownloadPath] = useState(null);
-
-  const handleFileUpload = async (e) => {
-    const file = e.target.files[0];
-
-    await taskController.generatePicture(file, to);
-
-    setDownloadPath("true");
-  };
-
-  const redirectToAnotherRoute = () => {
-    if (downloadPath !== null) {
-      console.log("reditect");
-
-      // navigate(`/download?path=${encodeURIComponent(downloadPath["path"])}`);
-      navigate(`/download`);
-    }
-  };
 
   useEffect(() => {
     redirectToAnotherRoute();
   }, [downloadPath]);
+
+  const handleFileUpload = async (e) => {
+    const file = e.target.files[0];
+
+    const data = await taskController.generatePicture(file, to);
+
+    setDownloadPath(data);
+  };
+
+  const redirectToAnotherRoute = () => {
+    if (downloadPath !== null) {
+      console.log("redirectToAnotherRoute");
+      navigate(`/download?path=${encodeURIComponent(downloadPath)}`);
+    }
+  };
 
   return (
     <TaskExtendedContaner>
