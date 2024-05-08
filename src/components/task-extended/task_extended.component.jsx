@@ -16,6 +16,10 @@ const TaskExtended = ({ task }) => {
 
   const [downloadPath, setDownloadPath] = useState(null);
 
+  useEffect(() => {
+    redirectToAnotherRoute();
+  }, [downloadPath]);
+
   const handleFileUpload = async (e) => {
     const file = e.target.files[0];
 
@@ -26,16 +30,11 @@ const TaskExtended = ({ task }) => {
 
   const redirectToAnotherRoute = () => {
     if (downloadPath !== null) {
-      console.log("reditect");
-
+      console.log("redirectToAnotherRoute");
       // navigate(`/download?path=${encodeURIComponent(downloadPath["path"])}`);
       navigate(`/download`);
     }
   };
-
-  useEffect(() => {
-    redirectToAnotherRoute();
-  }, [downloadPath]);
 
   return (
     <TaskExtendedContaner>

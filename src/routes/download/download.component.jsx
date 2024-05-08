@@ -1,4 +1,3 @@
-import { useSearchParams } from "react-router-dom";
 import DownloadImage from "../../components/download-image/download_image.component";
 import DownloadContainer from "./download.styles";
 

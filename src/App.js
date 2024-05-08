@@ -11,25 +11,11 @@ const App = () => {
     <Routes>
       <Route path='/' element={<Header />}>
         <Route index element={<Home />} />
-        <Route path='download' element={<Download />} />
         <Route path=':task' element={<TaskRoute />} />
+        <Route path='download' element={<Download />} />
       </Route>
     </Routes>
   );
 };
-
-// function App() {
-//   return (
-//     <Router>
-//       <Routes>
-//         <Route path='/' element={<HomePage />} />
-//         <Route path='/coloring-image' element={<ColoringImagePage />} />
-//         <Route path='/regenerate-image' element={<RegenerateImagePage />} />
-//         <Route path='/enhancing-image' element={<EnhancingImagePage />} />
-//         <Route path='/sketch-to-image' element={<SketchToImagePage />} />
-//       </Routes>
-//     </Router>
-//   );
-// }
 
 export default App;
