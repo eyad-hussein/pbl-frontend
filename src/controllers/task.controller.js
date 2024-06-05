@@ -19,7 +19,7 @@ const generatePicture = async (file, task) => {
   try {
     const reponse = await api.post(`${task}`, formData);
     const data = reponse.data;
-
+    console.log(`data ${data}`);
     return data["processed_image"];
   } catch (e) {
     console.log(e);

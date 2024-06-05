@@ -8,7 +8,6 @@ const NavBar = () => {
     <NavBarContainer>
       <Logo />
       <NavList />
-      <SignButton />
     </NavBarContainer>
   );
 };

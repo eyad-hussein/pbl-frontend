@@ -4,10 +4,10 @@ import NavListContainer from "./nav_list.styles";
 const NavList = () => {
   return (
     <NavListContainer>
-      <NavItem content='Home' />
-      <NavItem content='Product' />
-      <NavItem content='Tutorial' />
-      <NavItem content='Support' />
+      <NavItem link='/' content='Home' />
+      <NavItem link='/' content='Product' />
+      <NavItem link='/' content='Tutorial' />
+      <NavItem link='/' content='Support' />
     </NavListContainer>
   );
 };
