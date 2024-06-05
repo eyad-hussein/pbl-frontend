@@ -3,7 +3,7 @@ import logo from "../../assets/logos/logo.png";
 
 const Logo = () => {
   return (
-    <LogoContainer>
+    <LogoContainer href='/'>
       <img src={logo} alt='logo' />
       <span>
         Pix<span className='number-two'>2</span>Fix

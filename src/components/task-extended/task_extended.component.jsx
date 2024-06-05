@@ -8,6 +8,8 @@ import React, { useState, useEffect } from "react";
 import taskController from "../../controllers/task.controller";
 import { useNavigate } from "react-router-dom";
 import { Buffer } from "buffer";
+import Loading from "../utils/loading/loading.component";
+import Error from "../utils/error/error.component";
 
 const TaskExtended = ({ task }) => {
   const { images, title, to } = task;
@@ -15,7 +17,9 @@ const TaskExtended = ({ task }) => {
 
   const navigate = useNavigate();
 
-  // const [isRecieved, setIsRecieved] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isError, setIsError] = useState(false);
+
   const [downloadPath, setDownloadPath] = useState(null);
 
   useEffect(() => {
@@ -23,11 +27,17 @@ const TaskExtended = ({ task }) => {
   }, [downloadPath]);
 
   const handleFileUpload = async (e) => {
-    const file = e.target.files[0];
+    try {
+      setIsLoading(true);
+      const file = e.target.files[0];
+      const data = await taskController.generatePicture(file, to);
 
-    const data = await taskController.generatePicture(file, to);
-
-    setDownloadPath(data);
+      setDownloadPath(data);
+      setIsLoading(false);
+    } catch (error) {
+      setIsLoading(false);
+      setIsError(true);
+    }
   };
 
   const redirectToAnotherRoute = () => {
@@ -51,6 +61,9 @@ const TaskExtended = ({ task }) => {
         <img src={uploadIcon} alt='upload' />
         <p className='upload-details'>Upload Image Here</p>
       </UploadButtonContainer>
+
+      {isLoading && <Loading />}
+      {isError && <Error />}
     </TaskExtendedContaner>
   );
 };
